@@ -1,6 +1,6 @@
 # LinDirStat
 
-A near 1-1 clone of **WinDirStat** for Linux, written in **Rust** using the **egui** immediate-mode GUI library.
+A clone of **WinDirStat** for Linux, written in **Rust** using the **egui** immediate-mode GUI library.
 
 LinDirStat incorporates high-performance Linux directory traversal techniques inspired by **ncdu** and reproduces WinDirStat's iconic 3-pane layout, 3D cushion treemap visualization, extension ranking palette, and chomping Pacman animation.
 
