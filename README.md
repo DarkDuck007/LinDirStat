@@ -49,6 +49,42 @@ LinDirStat incorporates high-performance Linux directory traversal techniques in
 
 ---
 
+## 📦 Releases & Packaging
+
+Every release provides pre-compiled standalone packages for Linux x86_64:
+- **`LinDirStat-x86_64.AppImage`**: Single-file portable executable. Works out of the box on all major Linux distributions without installation.
+- **`lindirstat-x86_64-unknown-linux-gnu.tar.gz`**: Tarball containing the stripped `lindirstat` binary, desktop entry file, app icon, and documentation.
+- **`SHA256SUMS.txt`**: Cryptographic checksums for verifying file integrity.
+
+### Running the AppImage
+```bash
+chmod +x LinDirStat-x86_64.AppImage
+./LinDirStat-x86_64.AppImage
+```
+
+### Running from tar.gz
+```bash
+tar -xzf lindirstat-x86_64-unknown-linux-gnu.tar.gz
+cd lindirstat
+./lindirstat
+```
+
+### Building Packages Locally
+To generate both `.AppImage` and `.tar.gz` packages into `dist/`:
+```bash
+./scripts/build-packages.sh
+```
+
+### Creating Releases via GitHub Actions
+GitHub Actions automatically builds, tests, packages, and publishes a new GitHub Release whenever a version tag is pushed:
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+You can also trigger a release manually via the **Run workflow** button on GitHub Actions under the **Release** tab.
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites

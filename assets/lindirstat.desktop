@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=LinDirStat
+Comment=Disk usage statistics viewer and cleanup tool for Linux
+Exec=lindirstat %u
+Icon=lindirstat
+Terminal=false
+Categories=System;Filesystem;
+Keywords=disk;space;usage;cleanup;windirstat;treemap;
+StartupNotify=true
+StartupWMClass=lindirstat
