@@ -35,7 +35,8 @@ jobs:
             libegl1-mesa-dev \
             libfontconfig1-dev \
             libfuse2 \
-            file
+            file \
+            appstream
 
       - name: Cargo Check
         run: cargo check --all-targets
@@ -45,4 +46,15 @@ jobs:
 
       - name: Build Packages Smoke Test
         run: ./scripts/build-packages.sh
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        with:
+          name: lindirstat-main-linux-x86_64
+          path: |
+            dist/*.AppImage
+            dist/*.tar.gz
+            dist/SHA256SUMS.txt
+          retention-days: 14
 
