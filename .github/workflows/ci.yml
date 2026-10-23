@@ -35,8 +35,7 @@ jobs:
             libegl1-mesa-dev \
             libfontconfig1-dev \
             libfuse2 \
-            file \
-            appstream
+            file
 
       - name: Cargo Check
         run: cargo check --all-targets

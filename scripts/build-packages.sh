@@ -57,8 +57,7 @@ chmod +x "${APPDIR}/AppRun"
 
 cp assets/lindirstat.desktop "${APPDIR}/lindirstat.desktop"
 cp assets/lindirstat.desktop "${APPDIR}/usr/share/applications/lindirstat.desktop"
-cp assets/lindirstat.metainfo.xml "${APPDIR}/usr/share/metainfo/lindirstat.metainfo.xml"
-cp assets/lindirstat.metainfo.xml "${APPDIR}/usr/share/metainfo/lindirstat.appdata.xml"
+cp assets/io.github.lindirstat.LinDirStat.metainfo.xml "${APPDIR}/usr/share/metainfo/io.github.lindirstat.LinDirStat.metainfo.xml"
 cp assets/lindirstat.png "${APPDIR}/lindirstat.png"
 cp assets/lindirstat.png "${APPDIR}/.DirIcon"
 cp assets/lindirstat.png "${APPDIR}/usr/share/icons/hicolor/256x256/apps/lindirstat.png"
@@ -74,7 +73,7 @@ fi
 
 APPIMAGE_NAME="LinDirStat-v${VERSION}-x86_64.AppImage"
 echo "--> Generating AppImage: ${APPIMAGE_NAME}..."
-ARCH=x86_64 "$APPIMAGETOOL" --appimage-extract-and-run "$APPDIR" "${DIST_DIR}/${APPIMAGE_NAME}"
+ARCH=x86_64 NO_APPSTREAM=1 "$APPIMAGETOOL" --appimage-extract-and-run "$APPDIR" "${DIST_DIR}/${APPIMAGE_NAME}"
 cp "${DIST_DIR}/${APPIMAGE_NAME}" "${DIST_DIR}/LinDirStat-x86_64.AppImage"
 
 # 4. Generate SHA256 checksums

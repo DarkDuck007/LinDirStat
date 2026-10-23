@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.lindirstat.LinDirStat</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>LinDirStat</name>
+  <summary>Disk usage statistics viewer and cleanup tool for Linux</summary>
+  <description>
+    <p>
+      LinDirStat is a fast, near 1-1 clone of WinDirStat for Linux, written in Rust with egui.
+      It features a high-performance directory scanner, squarified 3D cushion treemap visualization,
+      extension ranking legend, and classic chomping Pacman animation.
+    </p>
+  </description>
+  <launchable type="desktop-id">lindirstat.desktop</launchable>
+  <url type="homepage">https://github.com/DarkDuck007/LinDirStat</url>
+  <provides>
+    <binary>lindirstat</binary>
+  </provides>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2026-10-23" />
+  </releases>
+</component>
